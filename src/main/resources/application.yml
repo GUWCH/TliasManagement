@@ -1,0 +1,19 @@
+spring:
+  application:
+   name: tlias-web-management
+
+#配置数据库
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tlias
+    username: root
+    password: 1234qwer
+#mybatis配置
+mybatis:
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+        # 开启驼峰命名映射
+        map-underscore-to-camel-case: true
+
+  
+
