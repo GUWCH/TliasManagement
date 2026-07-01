@@ -12,4 +12,13 @@ select id, name Name,create_time createTime,update_time updateTime from dept ord
     <delete id="deleteById" parameterType="int">
         delete from dept where id = #{id}
     </delete>
+    <insert id="add" parameterType="com.itheima.pojo.Dept">
+        insert into dept(name,create_time,update_time) values(#{name},#{createTime},#{updateTime})
+    </insert>
+    <select id="getById" parameterType="int" resultType="com.itheima.pojo.Dept">
+    select id, name Name,create_time createTime,update_time updateTime from dept where id=#{id} order by update_time desc
+    </select>
+    <update id="update" parameterType="com.itheima.pojo.Dept">
+    update dept set name=#{name},update_time=#{updateTime} where id=#{id}
+    </update>
 </mapper>
